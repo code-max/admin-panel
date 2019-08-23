@@ -1,0 +1,39 @@
+#top-most EditorConfig file
+# Execute and fix files in terminal: editorconfig-tools fix **/*
+root = true
+
+### All files
+[*] # Matches any string of characters, except path separators(/)
+# To control how line breaks are represented
+end_of_line = lf
+# To remove any whitespace characters preceding newline characters
+trim_trailing_whitespace = true
+# editorconfig-tools is unable to ignore longs strings or urls
+max_line_length = null
+
+# Set default charset
+[*.{js}]
+charset = utf-8
+# Tab indentation (no size specified)
+[*.{js}]
+indent_style = space
+indent_size = 2
+insert_final_newline = true
+
+# Matches the exact files either package.json or .travis.yml
+[{package.json,.travis.yml}]
+indent_style = space
+indent_size = 2
+insert_final_newline = false
+
+### Docker
+[Dockerfile]
+indent_style = space
+indent_size = 2
+insert_final_newline = false
+
+### Markdown
+[*.md]
+indent_style = space
+indent_size = 4
+trim_trailing_whitespace = false
