@@ -5,15 +5,12 @@
   "author": "code-max",
   "license": "",
   "scripts": {
-    "start": "nodemon --exec babel-node ./config/server.js",
+    "dev": "nodemon --exec babel-node ./config/server.js",
     "start-prod": "babel-node ./config/server.js",
     "build:docker": "docker build -t server-template .",
-    "test": "jest --runInBand --watch",
-    "test:ci": "jest --runInBand --ci --forceExit"
+    "lint": "eslint config/**/*.js models/**/*.js routes/**/*.js"
   },
   "dependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
     "@sentry/node": "5.6.2",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
@@ -27,21 +24,26 @@
     "graphql": "^14.5.4",
     "gravatar": "^1.8.0",
     "helmet": "^3.20.1",
-    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.6.11",
     "nodemon": "^1.19.1",
     "request": "^2.88.0",
+    "snyk": "^1.232.0",
     "validator": "^11.1.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
+    "@babel/cli": "^7.6.3",
+    "@babel/core": "^7.6.3",
+    "@babel/node": "^7.6.3",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.6.2",
+    "@babel/plugin-transform-arrow-functions": "^7.2.0",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-typescript": "^7.6.0",
     "babel-eslint": "^10.0.3",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "eslint": "^6.3.0",
-    "eslint-config-prettier": "^6.1.0",
-    "eslint-plugin-jest": "^22.16.0",
-    "eslint-plugin-prettier": "^3.1.0",
+    "eslint": "^6.5.1",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-prettier": "^3.1.1",
     "prettier": "^1.18.2"
   }
 }
