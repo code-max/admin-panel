@@ -3,17 +3,12 @@
 root = true
 
 ### All files
-[*] # Matches any string of characters, except path separators(/)
-# To control how line breaks are represented
-end_of_line = lf
-# To remove any whitespace characters preceding newline characters
-trim_trailing_whitespace = true
-# editorconfig-tools is unable to ignore longs strings or urls
-max_line_length = null
+[*]                             # Matches any string of characters, except path separators(/)
+end_of_line = lf                # To control how line breaks are represented
+trim_trailing_whitespace = true # To remove any whitespace characters preceding newline characters
+max_line_length = null          # editorconfig-tools is unable to ignore longs strings or urls
+charset = utf-8                 # Set default charset
 
-# Set default charset
-[*.{js}]
-charset = utf-8
 # Tab indentation (no size specified)
 [*.{js}]
 indent_style = space
